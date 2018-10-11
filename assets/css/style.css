@@ -1,0 +1,52 @@
+/* A vert cool technique my brother likes to use. Any color changes can be applied here, and apply to all sections that use that variable! */
+
+:root {
+    --headings-and-bg: #4aaaa5;
+    --regular-font: #777777;
+    --head-and-cont-bg: #ffffff;
+    --header-bord: #cccccc;
+    --footer-bg: #666666;
+    --cont-border: #dddddd;
+    --heading-font: 'Georgia', Times, 'Times New Roman', serif;
+    --all-other-font: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+}
+.navbar {
+    display: grid;
+    grid-template-columns: 35px 275px auto 200px 50px;
+    background-color: var(--head-and-cont-bg);
+    border-bottom-style: solid;
+    border-color: var(--header-bord);
+}
+
+.top_name {
+    display: flex;
+    justify-content: center;
+    background-color: var(--headings-and-bg);
+    padding: 5% 0% 5% 0%;
+    color: var(--head-and-cont-bg);
+    font-size: 2rem;
+    font-family: var(--heading-font);
+}
+
+
+
+@media (max-width: 768px) {
+    .top_name {
+        color: red;
+    }
+}
+    
+@media screen and (max-width: 640px) {
+    .top_name {
+        background-color: #777777;
+    }
+}
