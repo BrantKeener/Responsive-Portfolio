@@ -21,10 +21,12 @@ body {
 }
 .navbar {
     display: grid;
-    grid-template-columns: 35px 275px auto 200px 50px;
+    grid-template-columns: .5fr 5fr 14fr 5fr .5fr;
     background-color: var(--head-and-cont-bg);
     border-bottom-style: solid;
     border-color: var(--header-bord);
+    margin: 0%;
+    padding: 0%;
 }
 
 .top_name {
@@ -37,16 +39,79 @@ body {
     font-family: var(--heading-font);
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.navbuttonp {
+    margin: 0% 7% 0% 7%;
+    padding: 2% 5% 2% 5%;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: var(--header-bord);
+    border-radius: 10%;
+    border-width: .2rem;
+}
 
-@media (max-width: 768px) {
+a {
+    text-decoration: none;
+    font-family: var(--all-other-font);
+    color: var(--regular-font);
+}
+
+.primary_background {
+    background-image: url(../images/old-paper-with-partial-paisly-design.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0%;
+    padding: 0%;
+}
+
+.primary_content_index {
+    background-color: var(--head-and-cont-bg);
+    border-style: solid;
+    border-color: var(--cont-border);
+}
+
+.texture_link {
+    text-decoration: none;
+    color: var(--head-and-cont-bg);
+    font-size: .7rem;
+}
+
+.copyright {
+    text-align: center;
+    background-color: var(--footer-bg);
+    border-top-style: solid;
+    border-top-color: var(--headings-and-bg);
+    border-top-width: 3%;
+    color: var(--head-and-cont-bg);
+    font-family: var(--all-other-font);
+    padding: 2% 0% 2% 0%;
+
+}
+@media screen and (max-width: 980px) {
     .top_name {
-        color: red;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: grid;
+        grid-template-columns: 15px 275px auto 250px 15px;
     }
 }
     
 @media screen and (max-width: 640px) {
-    .top_name {
-        background-color: #777777;
+    .navbar {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .navbuttonp {
+        margin: 0% 3% 0% 3%;
+        padding: 3% 0% 3% 0%;
     }
 }
