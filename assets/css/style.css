@@ -239,6 +239,9 @@ p {
         width: 95%;
     }
     .link_img {
-        max-width: 400px;
+        max-width: 95%;
+    }
+    .banner{
+        max-width: 95%;
     }
 }
