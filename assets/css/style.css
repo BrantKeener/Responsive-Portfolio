@@ -126,14 +126,20 @@ a {
     padding-top: 3%;
 }
 
-.banner1, .banner2 {
-    position: absolute;
-    top: 40%;
-    justify-content: center;
+.link_img {
+    max-width: 250px;
+}
+
+.banner {
+    position: relative;
+    top: -95px;
+    text-align: center;
     background-color: var(--headings-and-bg);
     color: var(--head-and-cont-bg);
     font-family: var(--head-and-cont-bg);
+    padding: 3% 0% 3% 0%;
 }
+
 .professional_photo {
     float: left;
     margin: 2% 3% 3% 3%;
@@ -232,7 +238,7 @@ p {
         grid-template-rows: auto;
         width: 95%;
     }
-    .img_ban {
-        max-width: 300px;
+    .link_img {
+        max-width: 400px;
     }
 }
