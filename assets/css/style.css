@@ -19,11 +19,6 @@ body {
     padding: 0%;
 }
 
-.about_page, .contact_page {
-    overflow: hidden; 
-}
-
-
 .navbar {
     display: grid;
     grid-template-columns: .5fr 5fr 14fr 5fr .5fr;
@@ -131,6 +126,14 @@ a {
     padding-top: 3%;
 }
 
+.banner1, .banner2 {
+    position: absolute;
+    top: 40%;
+    justify-content: center;
+    background-color: var(--headings-and-bg);
+    color: var(--head-and-cont-bg);
+    font-family: var(--head-and-cont-bg);
+}
 .professional_photo {
     float: left;
     margin: 2% 3% 3% 3%;
@@ -174,9 +177,15 @@ p {
     color: var(--head-and-cont-bg);
     font-family: var(--all-other-font);
     padding: 2% 0% 2% 0%;
-    margin: 0%;
-
+    margin: 0%
 }
+
+@media screen and (max-width:1400px) {
+    .primary_content_portfolio {
+        width: 60%;
+    }
+}
+
 @media screen and (max-width: 980px) {
     .top_name {
         font-size: 1.5rem;
@@ -188,7 +197,7 @@ p {
         padding-bottom: 11%;
     }
     .primary_content_portfolio {
-        width: 65%;
+        width: 75%;
     }
 }
 
@@ -221,6 +230,9 @@ p {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        width:95%;
+        width: 95%;
+    }
+    .img_ban {
+        max-width: 300px;
     }
 }
