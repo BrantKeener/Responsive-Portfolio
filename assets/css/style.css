@@ -1,5 +1,4 @@
-/* A vert cool technique my brother likes to use. Any color changes can be applied here, and apply to all sections that use that variable! */
-
+/*CSS variables!*/
 :root {
     --headings-and-bg: #4aaaa5;
     --regular-font: #777777;
@@ -85,36 +84,39 @@ a {
 }
 
 .primary_background_portfolio {
-    padding: 2% 2% 2% 2%;
+    padding: 2% 0% 2% 2%;
 }
 
 .primary_content_index, .primary_content_contact, .primary_content_portfolio {
     background-color: var(--head-and-cont-bg);
     border-style: solid;
     border-color: var(--cont-border);
-    width: 40%;
-    height: 40%;
 }
 
 .primary_content_index {
     display: grid;
     grid-template-rows: 1fr 5fr;
     padding-bottom: .2%;
+    width: 40%;
 }
 
 .primary_content_contact {
     display: grid;
     grid-template-rows: 1fr 5fr 1fr;
-    height: 50%;
+    width: 40%;
 }
 
 .primary_content_portfolio {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: auto;
+    width: 40%;
+    align-items: center;
+    justify-items: center;
 }
 
 .teal_font {
+    justify-self: start;
     display: grid;
     grid-column: 1 / -1;
     font-family: var(--heading-font);
@@ -122,6 +124,11 @@ a {
     border-bottom: .2rem solid var(--cont-border);
     padding: 3% 0% 3% 0%;
     margin: 0% 3% 0% 3%;
+    width: 94%;
+}
+
+.img_ban {
+    padding-top: 3%;
 }
 
 .professional_photo {
@@ -180,6 +187,9 @@ p {
     .primary_content_index {
         padding-bottom: 11%;
     }
+    .primary_content_portfolio {
+        width: 65%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -188,6 +198,9 @@ p {
         grid-template-columns: 15px 275px auto 250px 15px;
     }
     .primary_content_index, .primary_content_contact {
+        width: 95%;
+    }
+    .primary_content_portfolio {
         width: 95%;
     }
 }
@@ -203,5 +216,11 @@ p {
     }
     .primary_content_contact {
         height: 65%;
+    }
+    .primary_content_portfolio {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width:95%;
     }
 }
