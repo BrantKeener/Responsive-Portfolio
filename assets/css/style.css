@@ -125,6 +125,7 @@ a {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    transform: translateY(0);
 }
 
 .primary_content_index_front {
