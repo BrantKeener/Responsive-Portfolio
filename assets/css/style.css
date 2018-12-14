@@ -143,6 +143,14 @@ a {
 
 }
 
+.tech_list {
+    list-style-type: none;
+}
+
+.turn_over {
+    animation: grow-and-shrink 2s infinite;
+}
+
 .primary_content_contact {
     display: grid;
     grid-template-rows: 1fr 5fr 1fr;
@@ -159,18 +167,29 @@ a {
     width: 40%;
     align-items: center;
     justify-items: center;
+    border-radius: 1rem;
+    background-color: var(--head-and-cont-bg);
+    box-shadow: 1rem 1rem 0.5rem var(--footer-bg);
 }
 
-.teal_font {
+.teal_font_about, .teal_font {
     justify-self: start;
-    display: grid;
-    grid-column: 1 / -1;
     font-family: var(--heading-font);
     color: var(--headings-and-bg);
     border-bottom: .2rem solid var(--cont-border);
     padding: 3% 0% 3% 0%;
     margin: 0% 3% 0% 3%;
     width: 94%;
+}
+
+.teal_font {
+    display: grid;
+    grid-column: 1 / -1;
+}
+
+.teal_font_about {
+    display: flex;
+    justify-content: space-between;
 }
 
 .img_ban {
@@ -237,6 +256,11 @@ p {
     margin: 0%
 }
 
+@keyframes grow-and-shrink {
+    from, to {transform: none;}
+    50% {transform: scale(1.2);}
+}
+
 @media screen and (max-width:1400px) {
     .primary_content_portfolio {
         width: 60%;
@@ -247,8 +271,8 @@ p {
     .top_name {
         font-size: 1.5rem;
     }
-    .primary_content_index, .primary_content_contact {
-        width: 50%;
+    .primary_content_flip_card, .primary_content_contact {
+        width: 80%;
     }
     .primary_content_index {
         padding-bottom: 11%;
@@ -263,7 +287,7 @@ p {
         display: grid;
         grid-template-columns: 15px 275px auto 250px 15px;
     }
-    .primary_content_index, .primary_content_contact {
+    .primary_content_flip_card, .primary_content_contact {
         width: 95%;
     }
     .primary_content_portfolio {
@@ -272,6 +296,9 @@ p {
 }
     
 @media screen and (max-width: 640px) {
+    .about_page {
+        overflow: scroll;
+    }
     .navbar {
         display: grid;
         grid-template-columns: auto;
@@ -279,6 +306,9 @@ p {
     .navbuttonp {
         margin: 0% 3% 0% 3%;
         padding: 3% 0% 3% 0%;
+    }
+    .primary_content_flip_card {
+        height: 750px;
     }
     .primary_content_contact {
         height: 65%;
