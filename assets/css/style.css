@@ -146,6 +146,12 @@ a {
 
 .tech_list {
     list-style-type: none;
+    height: 450px;
+}
+
+.list_columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .turn_over {
