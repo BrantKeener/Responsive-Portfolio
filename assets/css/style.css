@@ -10,16 +10,19 @@
     --all-other-font: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-html {
+html, body {
     font-size: 16px;
-}
-
-body {
     margin: 0%;
     padding: 0%;
+    height: 100%;
+    width: 100%;
 }
 
 .about_page {
+    overflow: hidden;
+}
+
+.contact_page {
     overflow: hidden;
 }
 
@@ -85,19 +88,22 @@ a {
     background-size: cover;
     background-origin: 0;
     margin: 0%;
-    width: 98%;
+    width: 100%;
 }
 
 .primary_background_index{
-    padding: 2% 0% 5% 2%;
+    padding: 2% 0% 0% 2%;
+    height: 78%;
 }
 
 .primary_background_contact {
-    padding: 2% 0% 8.5% 2%;
+    padding: 2% 0% 0% 2%;
+    height: 78%;
 }
 
 .primary_background_portfolio {
     padding: 2% 0% 2% 2%;
+    height: 100%;
 }
 
 .primary_content_flip_card {
