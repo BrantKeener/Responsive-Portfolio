@@ -18,12 +18,20 @@ html, body {
     width: 100%;
 }
 
+.about_para {
+    font-size: 1.25rem;
+}
+
 .about_page {
     overflow: hidden;
 }
 
 .contact_page {
     overflow: hidden;
+}
+
+.portfolio_page {
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -103,13 +111,13 @@ a {
 
 .primary_background_portfolio {
     padding: 2% 0% 2% 2%;
-    height: 100%;
+    height: 130%;
 }
 
 .primary_content_flip_card {
     background-color: transparent;
     width: 60%;
-    height: 525px;
+    height: 575px;
     perspective: 1000px;
 }
 
@@ -175,9 +183,9 @@ a {
 
 .primary_content_portfolio {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    width: 60%;
+    width: 75%;
     align-items: center;
     justify-items: center;
     border-radius: 1rem;
@@ -186,6 +194,7 @@ a {
 }
 
 .teal_font_about, .teal_font {
+    font-size: 3rem;
     justify-self: start;
     font-family: var(--heading-font);
     color: var(--headings-and-bg);
@@ -274,24 +283,46 @@ p {
     50% {transform: scale(1.2);}
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1500px) {
     .primary_content_portfolio {
-        width: 60%;
+        width: 85%;
+    }
+    .primary_content_flip_card {
+        width: 85%;
     }
 }
+
+@media screen and (max-width:1300px) {
+    .primary_content_portfolio {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:1125px) {
+    .primary_content_portfolio {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .portfolio_page {
+        height: 135%;
+    }
+}
+
 
 @media screen and (max-width: 980px) {
     .top_name {
         font-size: 1.5rem;
     }
     .primary_content_flip_card, .primary_content_contact {
-        width: 80%;
+        width: 95%;
+    }
+    .primary_content_contact {
+        height: 80%;
+    }
+    .primary_content_flip_card {
+        height: 95%;
     }
     .primary_content_index {
         padding-bottom: 11%;
-    }
-    .primary_content_portfolio {
-        width: 75%;
     }
 }
 
@@ -300,17 +331,28 @@ p {
         display: grid;
         grid-template-columns: 15px 275px auto 250px 15px;
     }
-    .primary_content_flip_card, .primary_content_contact {
-        width: 95%;
+    .primary_content_contact {
+        height: 85%;
+    }
+    .primary_content_flip_card {
+        height: 85%;
+    }
+    .about_page {
+        height: 125%;
+        overflow: scroll;
     }
     .primary_content_portfolio {
-        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .portfolio_page {
+        height: 165%;
     }
 }
     
 @media screen and (max-width: 640px) {
     .about_page {
         overflow: scroll;
+        height: 130%;
     }
     .navbar {
         display: grid;
@@ -330,12 +372,19 @@ p {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        width: 95%;
+        justify-items: left;
+        align-items: left;
     }
     .link_img {
-        max-width: 95%;
+        min-width: 500px;
+        padding-left: 10%;
     }
     .banner{
-        max-width: 95%;
+        font-size: 2rem;
+        margin-left: 10%;
+        min-width: 500px;
+    }
+    .portfolio_page {
+        height: 600%;
     }
 }
